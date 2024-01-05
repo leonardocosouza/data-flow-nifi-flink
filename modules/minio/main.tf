@@ -18,7 +18,7 @@ resource "argocd_project" "this" {
 
   spec {
     description  = "MinIO application project"
-    source_repos = ["https://github.com/GersonRS/data-engineering-for-machine-learning.git"]
+    source_repos = ["https://github.com/leonardocosouza/data-flow-nifi-flink.git"]
 
     destination {
       name      = "in-cluster"
@@ -57,7 +57,7 @@ resource "argocd_application" "this" {
     project = argocd_project.this.metadata.0.name
 
     source {
-      repo_url        = "https://github.com/GersonRS/data-engineering-for-machine-learning.git"
+      repo_url        = "https://github.com/leonardocosouza/data-flow-nifi-flink.git"
       path            = "helm-charts/minio"
       target_revision = var.target_revision
       helm {

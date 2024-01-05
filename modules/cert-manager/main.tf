@@ -6,8 +6,8 @@ resource "tls_self_signed_cert" "root" {
   private_key_pem = tls_private_key.root.private_key_pem
 
   subject {
-    common_name  = "modern-devops-stack.gersonrs.com"
-    organization = "GersonRS, SA"
+    common_name  = "bigdata.pipeline.x"
+    organization = "LSC"
   }
 
   validity_period_hours = 8760
