@@ -126,7 +126,7 @@ services:
 networks:
   nifi_network:
     driver: bridge
-
+#
 
 
 #docker exec -it openldap ldapsearch -x -H ldap://openldap:1389 -b "dc=lsc,dc=org" -D "cn=admin,dc=lsc,dc=org" -w adminpassword
